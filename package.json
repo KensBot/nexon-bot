@@ -1,0 +1,39 @@
+{
+   "name":"nexon-bot",
+   "version":"2.0",
+   "description":"WhatsApp Bot (Base)",
+   "main":"index.js",
+   "scripts": {
+      "start": "node ."
+   },
+   "repository":{
+      "type":"git",
+      "url":"git+https://github.com/KensBot/nexon-bot.git"
+   },
+   "keywords":[
+      "wb",
+      "bot"
+   ],
+   "author":"Ransyah Iyx",
+   "license":"ISC",
+   "bugs":{
+      "url":"https://github.com/KensBot/nexon-bot/issues"
+   },
+   "homepage":"https://github.com/KensBot/nexon-bot#readme",
+   "dependencies":{
+      "@adiwajshing/baileys":"npm:@whiskeysockets/baileys",
+      "@adiwajshing/keyed-db":"^0.2.4",
+      "@colors/colors": "^1.6.0",
+      "nexonwb": "^1.17.22",
+      "bytes": "^3.1.2",
+      "cfonts": "3.1.1",
+      "express": "~4.16.4",
+      "json-stable-stringify": "^1.0.2",
+      "node-cron": "^3.0.0",
+      "node-gtts": "^2.0.2",
+      "qrcode": "1.5.0",
+      "speedtest-net": "1.6.2",
+      "translate-google-api": "1.0.4",
+      "yt-search": "^2.10.3"
+   }
+}

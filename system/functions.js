@@ -1,0 +1,1 @@
+const { Function: Func } = new(require('nexonwb'))
