@@ -6,7 +6,7 @@ const spinnies = new(require('spinnies'))(),
    path = require('path'),
    colors = require('@colors/colors'),
    stable = require('json-stable-stringify'),
-   env = require('./config.json')
+   env = require('./system/settings.json')
 const cache = new(require('node-cache'))({
    stdTTL: env.cooldown
 })
