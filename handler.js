@@ -1,5 +1,5 @@
 const { Function: Func, Logs, Scraper } = new(require('nexonwb'))
-const env = require('./config.json')
+const env = require('./system/settings.json')
 const cron = require('node-cron')
 const cache = new(require('node-cache'))({
    stdTTL: env.cooldown
