@@ -111,7 +111,7 @@ module.exports = (m, env) => {
       if (!('onlyprefix' in setting)) setting.onlyprefix = '+'
       if (!('owners' in setting)) setting.owners = ['6285726319205']
       if (!isNumber(setting.lastReset)) setting.lastReset = new Date * 1
-      if (!('msg' in setting)) setting.msg = 'Hi +tag 🪸\nI am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.\n\n◦ *Database* : +db\n◦ *Library* : Baileys v+version\n\n◦ *Source* : https://github.com/KensBot/nexon-bot\n\nIf you find an error or want to upgrade premium plan contact the owner.'
+      if (!('msg' in setting)) setting.msg = 'Hi +tag 🪸\nI am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.\n\n◦ *Database* : +db\n◦ *Library* : Baileys v+version\n◦ *Source* : https://github.com/KensBot/nexon-bot\n\nIf you find an error or want to upgrade premium plan contact the owner.'
       if (!isNumber(setting.style)) setting.style = 2
       if (!('cover' in setting)) setting.cover = 'https://telegra.ph/file/52c99eb40f89d7ed22173.jpg'
       if (!('link' in setting)) setting.link = 'https://chat.whatsapp.com/IN4QaZ6NqOACdlIOvwLitJ'
