@@ -1,4 +1,4 @@
-const { Function: Func, Logs, Scraper } = new(require('nexonwb'))
+const { Function: Func, Logs, Scraper, ApiNexon } = new(require('nexonwb'))
 const env = require('./system/settings.json')
 const cron = require('node-cron')
 const cache = new(require('node-cache'))({
@@ -161,8 +161,7 @@ module.exports = async (client, ctx) => {
                client.reply(m.chat, global.status.private, m)
                continue
             }
-            cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, store, Func, Scraper })
-            break
+            cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, store, Func, Scraper, ApiNexon })
          }
       } else {
          const is_events = Object.fromEntries(Object.entries(plugins).filter(([name, prop]) => !prop.run.usage))
@@ -194,13 +193,13 @@ module.exports = async (client, ctx) => {
             if (event.admin && !isAdmin) continue
             if (event.private && m.isGroup) continue
             if (event.download && (!setting.autodownload || (body && env.evaluate_chars.some(v => body.startsWith(v))))) continue
-            event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, store, Func, Scraper })
+            event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, store, Func, Scraper, ApiNexon })
          }
       }
    } catch (e) {
       if (/(undefined|overlimit|timed|timeout|users|item|time)/ig.test(e.message)) return
       console.log(e)
-      if (!m.fromMe) return m.reply(Func.jsonFormat(new Error('neoxr-bot encountered an error :' + e)))
+      if (!m.fromMe) return m.reply(Func.jsonFormat(new Error('nexon-bot encountered an error :' + e)))
    }
    Func.reload(require.resolve(__filename))
 }
