@@ -50,7 +50,7 @@
 
 ### Configuration
 
-There are 2 configuration files namely ```.env``` and ```config.json```, adjust them before installing.
+There are 2 configuration files namely ```.env``` and ```settings.json```, adjust them before installing.
 
 ```Javascript
 {
