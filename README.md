@@ -142,7 +142,8 @@ exports.run = {
       command,
       env,
       Scraper,
-      Func
+      Func,
+      ApiNexon
    }) => {
       try {
          // do something
@@ -185,6 +186,8 @@ exports.run = {
 
 + ```Scraper``` : parameter containing some of the scraper functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
 
++ ```ApiNexon``` : parameter containing some of the scraper downloadee the functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
+
 + ```Func``` : parameter containing some of the utilites functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
 
 #### Down Side Options
@@ -203,7 +206,7 @@ exports.run = {
 
 **Other** :
 ```Javascript
-cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper })
+cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper, ApiNexon })
 ```
 
 ### Event Plugin
@@ -235,7 +238,7 @@ exports.run = {
 
 **Other** :
 ```Javascript
-event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper })
+event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper, ApiNexon })
 ```
 
 Others please learn by yourself from other plugins.
