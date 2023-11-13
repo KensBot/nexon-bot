@@ -4,7 +4,7 @@
 
 ### Important
 
-> To use [nexonwb >= v1.17.20](https://www.npmjs.com/package/nexonwb) you must add the following components [Open Commit](https://github.com/KensBot/nexon-bot/commit/26790679dea49494c25106edbaffc5ae9cb716ec)
+> To use [nexonwb >= v1.21.11](https://www.npmjs.com/package/nexonwb) you must add the following components [Open Commit](https://github.com/KensBot/nexon-bot/commit/26790679dea49494c25106edbaffc5ae9cb716ec)
 
 ### Premium Script v3.0.5
 
@@ -27,10 +27,6 @@
 **Additional Features :**
 
 > Addional Features adalah fitur tambahan yang di jual terpisah / Additional features are features that are sold separately.
-
-🏷️ Cloud Storage (**+Rp. 80.000 / +$10.80**)
-
-> Cloud Storage ini berfungsi untuk menyimpan file media (sticker, foto, video, audio) ke cloud storage tanpa membebani disk space server bot. Dalam script ini terdapat **script uploader** yang bisa di upload ke replit sebagai tempat menyimpan media, plugin **storage.js** dan **storage_ev.js**
 
 🏷️ Werewolf Games (**+Rp. 80.000 / +$10.80**)
 
