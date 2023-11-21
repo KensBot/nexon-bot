@@ -1,6 +1,6 @@
-require('dotenv').config(), require('rootpath')(), require('./server')
-const { spawn: spawn } = require('child_process'), path = require('path'), colors = require('@colors/colors/safe'), CFonts = require('cfonts')
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
+if (process.argv.includes('--server')) require('./server')
+require('dotenv').config(), require('rootpath')()
+const { spawn: spawn } = require('child_process'), { Function: Func } = new(require('nexonwb')), path = require('path'), colors = require('@colors/colors/safe'), CFonts = require('cfonts')
 
 const unhandledRejections = new Map()
 process.on('unhandledRejection', (reason, promise) => {
