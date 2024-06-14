@@ -20,9 +20,9 @@
 
 **Benefits :**
 
-[ √ ] Free Updates
-[ √ ] No Encryption
-[ √ ] No Apikey (Full Scraper)
+- [ √ ] Free Updates
+- [ √ ] No Encryption
+- [ √ ] No Apikey (Full Scraper)
 
 **Additional Features :**
 
