@@ -169,7 +169,7 @@ exports.run = {
 
 + ```m``` : parameters that contain chat object.
 
-+ ```client``` : parameter which contains several messaging functions from [nexonprime](https://www.npmjs.com/package/nexonprime) and default functions from [Baileys](https://github.com/WhiskeySockets/Baileys).
++ ```clips``` : parameter which contains several messaging functions from [nexonprime](https://www.npmjs.com/package/nexonprime) and default functions from [Baileys](https://github.com/WhiskeySockets/Baileys).
 
 + ```args``` : nput given after command in the form of an array is usually found in downloader feature which uses links such as ig, youtube, fb, etc. Parsing based on index. (Example: args[1], args[2], args[3], ....)
 
@@ -201,7 +201,7 @@ exports.run = {
 
 **Other** :
 ```Javascript
-cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper })
+cmd.async(m, { clips, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
 
 ### Event Plugin
@@ -233,7 +233,7 @@ exports.run = {
 
 **Other** :
 ```Javascript
-event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
+event.async(m, { clips, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
 
 Others please learn by yourself from other plugins.
