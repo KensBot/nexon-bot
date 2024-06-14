@@ -1,15 +1,15 @@
 exports.run = {
-   usage: ['ohidetag'],
+   noxious: ['ohidetag'],
    hidden: ['o'],
    use: 'text',
    category: 'owner',
    async: async (m, {
-      client,
+      clips,
       text,
       participants
    }) => {
       let users = participants.map(u => u.id)
-      await client.reply(m.chat, text, null, {
+      await clips.reply(m.chat, text, null, {
          mentions: users
       })
    },

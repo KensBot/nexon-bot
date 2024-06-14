@@ -1,24 +1,23 @@
 exports.run = {
-   usage: ['setwelcome', 'setleft'],
+   noxious: ['setwelcome', 'setleft'],
    hidden: ['setout'],
    use: 'text',
-   category: 'admin tools',
+   category: 'admin',
    async: async (m, {
-      client,
+      clips,
       text,
       isPrefix,
-      command,
-      Func
+      command
    }) => {
       let setup = global.db.groups.find(v => v.jid == m.chat)
       if (command == 'setwelcome') {
-         if (!text) return client.reply(m.chat, formatWel(isPrefix, command), m)
+         if (!text) return clips.reply(m.chat, formatWel(isPrefix, command), m)
          setup.text_welcome = text
-         await client.reply(m.chat, Func.texted('bold', `🚩 Successfully set.`), m)
+         await clips.reply(m.chat, Func.texted('bold', `🚩 Successfully set.`), m)
       } else if (/set(out|left)/i.test(command)) {
-         if (!text) return client.reply(m.chat, formatLef(isPrefix, command), m)
+         if (!text) return clips.reply(m.chat, formatLef(isPrefix, command), m)
          setup.text_left = text
-         await client.reply(m.chat, Func.texted('bold', `🚩 Successfully set.`), m)
+         await clips.reply(m.chat, Func.texted('bold', `🚩 Successfully set.`), m)
       }
    },
    admin: true

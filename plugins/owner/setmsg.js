@@ -1,21 +1,20 @@
 exports.run = {
-   usage: ['setmsg'],
+   noxious: ['setmsg'],
    use: 'text',
    category: 'owner',
    async: async (m, {
-      client,
+      clips,
       text,
       isPrefix,
-      command,
-      Func
+      command
    }) => {
       try {
          let setting = global.db.setting
-         if (!text) return client.reply(m.chat, explain(isPrefix, command), m)
+         if (!text) return clips.reply(m.chat, explain(isPrefix, command), m)
          setting.msg = text
-         client.reply(m.chat, Func.texted('bold', `🚩 Menu Message successfully set.`), m)
+         clips.reply(m.chat, Func.texted('bold', `Menu Pesan berhasil diatur.`), m)
       } catch (e) {
-         client.reply(m.chat, Func.jsonFormat(e), m)
+         clips.reply(m.chat, Func.jsonFormat(e), m)
       }
    },
    owner: true,
@@ -24,11 +23,11 @@ exports.run = {
 }
 
 const explain = (prefix, command) => {
-   return `Sorry, can't return without text, and this explanation and how to use :
+   return `Maaf, tidak bisa kembali tanpa teks, dan penjelasan ini dan bagaimana menggunakan :
 
-*1.* +tag : for mention sender.
-*2.* +name : to getting sender name.
-*3.* +greeting : to display greetings by time.
+*1.* +tag : untuk menyebutkan pengirim.
+*2.* +name : untuk mendapatkan nama pengirim.
+*3.* +greeting : untuk menampilkan salam berdasarkan waktu.
 
-• *Example* : ${prefix + command} Hi +tag +greeting, i'm an automation system`
+• *Example* : ${prefix + command} Hi +tag +greeting, saya sistem otomasi`
 }

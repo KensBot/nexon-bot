@@ -1,102 +1,103 @@
-## NEXON-BOT (PREMIUM SCRIPT)
+### Premium Script v5.0.0
 
-> An implementation of [nexonwb](https://www.npmjs.com/package/nexonwb) which has been optimized to be lightweigth.
-
-### Important
-
-> To use [nexonwb >= v1.21.11](https://www.npmjs.com/package/nexonwb) you must add the following components [Open Commit](https://github.com/KensBot/nexon-bot/commit/26790679dea49494c25106edbaffc5ae9cb716ec)
-
-### Premium Script v3.0.5
-
-🏷️ Price : **Rp. 200.000 / $12.88**
+🚩  Price : *Rp. 200.000*
 
 **Special Features & Benefit :**
-- AI & AI Image (Original OpenAI)
-- Anti Bot
-- Auto Download
-- Porn Detector (Only Image)
-- 11 Mini Games
-- Rpg games
-- Leveling & Roles
-- Email Verification
-- Captcha Verification
-- Send Email
-- High Optimation
-- Free Updates
+
+-  AI & AI Image (No Apikey) 
+-  Chat GPT (Turbo 3.5)
+-  Anti Bot
+-  Auto Download
+-  Porn Detector (Image Recognize)
+-  36 Mini Games
+-  Rpg Games
+-  Leveling & Roles
+-  Email Verification
+-  Send Email
+-  No Encrpyt
+-  Full Scraper (No Apikey)
+-  High Optimation
+
+**Benefits :**
+
+[ √ ] Free Updates
+[ √ ] No Encryption
+[ √ ] No Apikey (Full Scraper)
 
 **Additional Features :**
 
-> Addional Features adalah fitur tambahan yang di jual terpisah / Additional features are features that are sold separately.
+- Game Plugins 
+🚩 Price : **+Rp. 70.000**
 
-🏷️ Werewolf Games (**+Rp. 80.000 / +$10.80**)
+- Payment Gateway (**Saweria**)
+🚩 Price : **+Rp. 100.000**
 
-> Werewolf Games ini untuk memainkan game seperti Among Us namun sedikit berbeda, plugin **were.js** dan **werepc.js**
+- Top Up (**Dana/Ovo/Gopay**)
+🚩 Price : **+Rp. 70.000**
 
-🏷️ Menfess (**+Rp. 15.000 / +$3.80**)
+> Additional Features are additional features that are sold separately.
+> Can/have ever run WhatsApp Bot
 
-> Menfess untuk mengirim chat confess kepada seseorang dan penerima pesan bisa membalas chat dari pengirim confess tanpa perlu menggunakan command/perintah
+**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [NEXON BOT](https://chat.whatsapp.com/I3PoXJ878NMKYcPOejAUAV)
 
-🏷️ Payment Gateway (**+Rp. 80.000 / +$10.80**)
+### Requirement :
 
-> Payment Gateway ini berfungsi untuk melakukan pembayaran otomatis menggunakan QRIS pada fitur ini terdapat script **payment gateway**, plugin **payment.js**, **sewa.js** dan **buyprem.js** harga dan fee bisa di sesuaikan sesuai keinginan
-
-**Creator / Group** : [Kens Ransyah](https://wa.me/6285726319205) / [CHATBOT](https://chat.whatsapp.com/IN4QaZ6NqOACdlIOvwLitJ)
-
-### Requirements
-
-- [x] NodeJS >= 16
+- [x] NodeJS >= All NodeJs
 - [x] FFMPEG
+- [x] Canvas (*Welcome/Leave, Profile, Dll*)
 - [x] Server vCPU/RAM 1/2GB (Min)
 
 ### Configuration
 
-There are 2 configuration files namely ```.env``` and ```settings.json```, adjust them before installing.
+There are 1 configuration files namely ```env.json```, adjust them before installing.
 
 ```Javascript
 {
-   "owner": "6285726319205",
-   "owner_name": "Kens Ransyah",
-   "database": "data",
-   "limit": 15,
-   "ram_limit": "9000mb",
-   "max_upload": 50,
-   "max_upload_free": 10,
-   "cooldown": 3,
-   "timer": 180000,
-   "timeout": 1800000,
+   "owner": "628888375863",
+   "name_owner": "Kens Ransyah",
+   "database": "database",
+   "ram_usage": "900mb",
+   "max_upload_free": "100",
+   "max_upload": "250",
+   "limit": 25,
+   "cooldown": 3, // anti spam hold 3 seconds
+   "multiplier": 36,
+   "timer": 1800000,
    "blocks": ["994", "91", "92"],
-   "evaluate_chars":  ["=>", "~>", "<", ">", "$"],
+   "evaluate_chars": ["=>", "~>", "<", ">", "$"],
    "pairing": {
       "state": true, // "true" if you want to use the pairing code
       "number": 62xxxx // start number with country code
+   },
+   "replit": {
+     "_url": ""
+   },
+   "api_key": {
+     "mongoDB": "", // Database : https://www.mongodb.com/
    }
 }
 ```
 
-```.env
-### ApiKey : https://api.neoxr.my.id
-API_ENDPOINT = 'https://api.neoxr.my.id/api'
-API_KEY = 'your_apikey'
-
-### Database : https://www.mongodb.com/
-DATABASE_URL = ''
-
-### Timezone (Important)
-TZ = 'Asia/Jakarta'
-```
 
 **Notes** :
-+ ```ram_limit``` : ram usage limit, for example you have a server with 1gb of ram set before the maximum capacity is 900mb.
++ ```ram_usage``` : ram usage limit, for example you have a server with 1gb of ram set before the maximum capacity is 900mb.
 
-+ ```API_KEY``` : some of the features in this script use apikey, especially the downloader feature, to get an apiKey you can get it on the [Neoxr Api's](https://api.neoxr.my.id) with prices that vary according to your needs.
++ ```mongoDB``` : can be filled with mongo and postgresql URLs to use localdb just leave it blank and the data will be saved to the .json file.
 
-+ ```DATABASE_URL``` : can be filled with mongo and postgresql URLs to use localdb just leave it blank and the data will be saved to the .json file.
+> Localdb is only for development state, for production state you must use a cloud database (mongo / postgres)
+
+### High Level Spam Detection
+
+This program is equipped with a spam detector (anti-spam) which is very sensitive.
+
+Look, i tries to spam commands against the bot, and will only respond to 1 command.
+
 
 ### Pairing Code
 
 Connecting account without qr scan but using pairing code.
 
-<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/52a638cafc5546f126478.jpg" /></p>
+<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/ae37cb69b0cc770f66d4b.jpg" /></p>
 
 ```Javascript
 {
@@ -112,14 +113,14 @@ Connecting account without qr scan but using pairing code.
 Make sure the configuration and server meet the requirements so that there are no problems during installation or when this bot is running, type this on your console :
 
 ```
-$ yarn
+$ yarn or npm i
 $ node .
 ```
 
 or want to use pm2
 
 ```
-$ yarn
+$ yarn or npm i
 $ npm i -g pm2
 $ pm2 start index.js && pm2 save && pm2 logs
 ```
@@ -130,26 +131,22 @@ $ pm2 start index.js && pm2 save && pm2 logs
 
 ```Javascript
 exports.run = {
-   usage: ['mediafire'],
+   noxious: ['mediafire'],
    hidden: ['mf'],
    use: 'link',
    category: 'downloader',
    async: async (m, {
-      client,
+      clips,
       args,
       text,
       isPrefix,
-      command,
-      env,
-      Scraper,
-      Func,
-      ApiNexon
+      command
    }) => {
       try {
          // do something
       } catch (e) {
          console.log(e)
-         client.reply(m.chat, Func.jsonFormat(e), m)
+         clips.reply(m.chat, Func.jsonFormat(e), m)
       }
    },
    error: false,
@@ -162,7 +159,7 @@ exports.run = {
 
 #### Up Side Options :
 
-+ ```usage``` : main command that will automatically appear in the menu list, use of usage can be in the form of arrays and strings.
++ ```noxious``` : main command that will automatically appear in the menu list, use of usage can be in the form of arrays and strings.
 
 + ```hidden``` : commands that are hidden from the menu list, suitable for command aliases or hidden features.
 
@@ -172,7 +169,7 @@ exports.run = {
 
 + ```m``` : parameters that contain chat object.
 
-+ ```client``` : parameter which contains several messaging functions from [nexonwb](https://www.npmjs.com/package/nexonwb) and default functions from [Baileys](https://github.com/WhiskeySockets/Baileys).
++ ```client``` : parameter which contains several messaging functions from [nexonprime](https://www.npmjs.com/package/nexonprime) and default functions from [Baileys](https://github.com/WhiskeySockets/Baileys).
 
 + ```args``` : nput given after command in the form of an array is usually found in downloader feature which uses links such as ig, youtube, fb, etc. Parsing based on index. (Example: args[1], args[2], args[3], ....)
 
@@ -182,13 +179,11 @@ exports.run = {
 
 + ```command``` : commands used can be used in an if else or switch case conditional when creating 1 plugin with several commands in it.
 
-+ ```env``` : parameters that contain the configuration from the config.json file.
++ ```env``` : parameters that contain the configuration from the env.json file.
 
-+ ```Scraper``` : parameter containing some of the scraper functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
++ ```Scraper``` : parameter containing some of the scraper functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
 
-+ ```ApiNexon``` : parameter containing some of the scraper downloadee the functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
-
-+ ```Func``` : parameter containing some of the utilites functions of [nexonwb](https://www.npmjs.com/package/nexonwb) module.
++ ```Func``` : parameter containing some of the utilites functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
 
 #### Down Side Options
 
@@ -206,7 +201,7 @@ exports.run = {
 
 **Other** :
 ```Javascript
-cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper, ApiNexon })
+cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper })
 ```
 
 ### Event Plugin
@@ -216,7 +211,7 @@ cmd.async(m, { client, args, text, isPrefix: prefix, prefixes, command, groupMet
 ```Javascript
 exports.run = {
    async: async (m, {
-      client,
+      clips,
       body,
       prefixes
    }) => {
@@ -238,9 +233,9 @@ exports.run = {
 
 **Other** :
 ```Javascript
-event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList, env, ctx, Func, Scraper, ApiNexon })
+event.async(m, { client, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
 
 Others please learn by yourself from other plugins.
 
-Check this repository regularly to get updates because the progress base is not 100% yet, if you find an error, please make an issue. Thanks.
+Check this repository regularly to get updates because the progress base is not 100% yet (this is just a base or beta test), if you find an error please make an issue. Thanks.

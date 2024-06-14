@@ -1,5 +1,3 @@
-const { Scraper } = new(require('nexonwb'))
-const axios = require('axios'),
-   cheerio = require('cheerio'),
+const fs = require('fs'),
    FormData = require('form-data'),
-   fetch = require('node-fetch')
+   axios = require('axios')

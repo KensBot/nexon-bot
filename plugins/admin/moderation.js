@@ -1,30 +1,50 @@
 exports.run = {
-   usage: ['antidelete', 'antilink', 'antivirtex', 'autosticker', 'viewonce', 'left', 'filter', 'localonly', 'welcome'],
+   noxious: ['antidelete', 'antilink', 'left', 'filter', 'localonly', 'welcome'],
    use: 'on / off',
-   category: 'admin tools',
+   category: 'admin',
    async: async (m, {
-      client,
+      clips,
       args,
       isPrefix,
       command,
-      isBotAdmin,
-      Func
+      isBotAdmin
    }) => {
-      try {
-         let setting = global.db.groups.find(v => v.jid == m.chat)
-         let type = command.toLowerCase()
-         if (!isBotAdmin && /antilink|antivirtex|filter|localonly/.test(type)) return client.reply(m.chat, global.status.botAdmin, m)
-         if (!args || !args[0]) return client.reply(m.chat, `🚩 *Current status* : [ ${setting[type] ? 'ON' : 'OFF'} ] (Enter *On* or *Off*)`, m)
-         let option = args[0].toLowerCase()
-         let optionList = ['on', 'off']
-         if (!optionList.includes(option)) return client.reply(m.chat, `🚩 *Current status* : [ ${setting[type] ? 'ON' : 'OFF'} ] (Enter *On* or *Off*)`, m)
-         let status = option != 'on' ? false : true
-         if (setting[type] == status) return client.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} has been ${option == 'on' ? 'activated' : 'inactivated'} previously.`), m)
-         setting[type] = status
-         client.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} has been ${option == 'on' ? 'activated' : 'inactivated'} successfully.`), m)
-      } catch (e) {
-         return client.reply(m.chat, Func.jsonFormat(e), m)
-      }
+      let setting = global.db.groups.find(v => v.jid == m.chat)
+      let buttons = [{
+            name: 'single_select',
+            buttonParamsJson: JSON.stringify({
+               title: 'Tap Here!',
+               sections: [{
+                  rows: [{
+                      title: Func.ucword(command),
+                      description: `[ Status : ON ]`,
+                      id: `${isPrefix + command} on`
+                  }, {
+                      title: Func.ucword(command),
+                      description: `[ Status : OFF ]`,
+                      id: `${isPrefix + command} off`
+                  }]
+              }]
+          })
+      }]
+      let type = command.toLowerCase()
+      if (!isBotAdmin && /antiporn|captcha|antibot|antilink|antivirtex|filter|localonly/.test(type)) return clips.reply(m.chat, global.status.botAdmin, m)
+      if (!args || !args[0]) return clips.sendNMessages(m.chat, buttons, m, {
+            header: global.botname,
+            content: `🚩 *Current status* : [ ${setting[type] ? 'ON' : 'OFF'} ]`,
+            footer: global.footer
+         })
+      let option = args[0].toLowerCase()
+      let optionList = ['on', 'off']
+      if (!optionList.includes(option)) return clips.sendNMessages(m.chat, buttons, m, {
+            header: global.botname,
+            content: `🚩 *Current status* : [ ${setting[type] ? 'ON' : 'OFF'} ]`,
+            footer: global.footer
+         })
+      let status = option != 'on' ? false : true
+      if (setting[type] == status) return clips.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} has been ${option == 'on' ? 'activated' : 'inactivated'} previously.`), m)
+      setting[type] = status
+      clips.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} has been ${option == 'on' ? 'activated' : 'inactivated'} successfully.`), m)
    },
    admin: true,
    group: true,

@@ -1,29 +1,28 @@
 exports.run = {
-   usage: ['disable', 'enable'],
+   noxious: ['disable', 'enable'],
    use: 'command',
    category: 'owner',
    async: async (m, {
-      client,
+      clips,
       args,
       isPrefix,
       command,
-      plugins,
-      Func
+      plugins
    }) => {
       let cmd = global.db.setting
-      if (!args || !args[0]) return client.reply(m.chat, Func.example(isPrefix, command, 'tiktok'), m)
+      if (!args || !args[0]) return clips.reply(m.chat, Func.example(isPrefix, command, 'tiktok'), m)
       let commands = Func.arrayJoin(Object.values(Object.fromEntries(Object.entries(plugins).filter(([name, prop]) => prop.run.usage))).map(v => v.run.usage))
-      if (!commands.includes(args[0])) return client.reply(m.chat, Func.texted('bold', `🚩 Command ${isPrefix + args[0]} does not exist.`), m)
+      if (!commands.includes(args[0])) return clips.reply(m.chat, Func.texted('bold', `Command ${isPrefix + args[0]} tidak ada.`), m)
       if (command == 'disable') {
-         if (cmd.error.includes(args[0])) return client.reply(m.chat, Func.texted('bold', `🚩 ${isPrefix + args[0]} command was previously disabled.`), m)
+         if (cmd.error.includes(args[0])) return clips.reply(m.chat, Func.texted('bold', `${isPrefix + args[0]} command sebelumnya dinonaktifkan.`), m)
          cmd.error.push(args[0])
-         client.reply(m.chat, Func.texted('bold', `🚩 Command ${isPrefix + args[0]} disabled successfully.`), m)
+         clips.reply(m.chat, Func.texted('bold', `Command ${isPrefix + args[0]} berhasil dinonaktifkan.`), m)
       } else if (command == 'enable') {
-         if (!cmd.error.includes(args[0])) return client.reply(m.chat, Func.texted('bold', `🚩 Command ${isPrefix + args[0]} does not exist.`), m)
+         if (!cmd.error.includes(args[0])) return clips.reply(m.chat, Func.texted('bold', `Command ${isPrefix + args[0]} tidak ada.`), m)
          cmd.error.forEach((data, index) => {
             if (data === args[0]) cmd.error.splice(index, 1)
          })
-         client.reply(m.chat, Func.texted('bold', `🚩 Command ${isPrefix + args[0]} successfully activated.`), m)
+         clips.reply(m.chat, Func.texted('bold', `Command ${isPrefix + args[0]} berhasil diaktifkan.`), m)
       }
    },
    owner: true

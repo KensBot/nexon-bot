@@ -1,21 +1,45 @@
-const { Function: Func, NexonApi } = new(require('nexonwb'))
-global.Api = new NexonApi(process.env.API_ENDPOINT, process.env.API_KEY)
-global.header = `© nexon-bot v${require('package.json').version} (Beta)`
-global.footer = `ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ɴᴇxᴏɴ ッ`
+const { Function, Scraper } = new (require('nexonprime'))
+const fs = require('fs')
+const chalk = require('chalk')
+global.fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+// Timezone (Default : Asia/Jakarta)
+global.timezone = 'Asia/Jakarta'
+// Bot name
+global.botname = `© nexon-bot`
+// Footer text
+global.footer = 'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ɴᴇxᴏɴ ッ'
+// Function Scraper
+global.Scrape = Scraper
+// Function
+global.Func = Function
+// Global status
 global.status = Object.freeze({
-   invalid: '_Invalid url_',
-   wrong: '_Wrong format._',
-   fail: '_Can\'t get metadata_',
-   error: '_Error occurred_',
-   errorF: '_Sorry this feature is in error._',
-   premium: '❌ _This feature only for premium user._',
-   auth: '⚠️ _You do not have permission to use this feature, ask the owner first._',
-   owner: '⚠️ _This command only for owner._',
-   group: '⚠️ _This command will only work in groups._',
-   botAdmin: '⚠️ _This command will work when I become an admin._',
-   admin: '⚠️ _This command only for group admin._',
-   private: '❌ _Use this command in private chat._',
-   gameSystem: '⚠️ _Game features have been disabled._',
-   gameInGroup: '⚠️ _Game features have not been activated for this group._',
-   gameLevel: '⚠️ _You cannot play the game because your level has reached the maximum limit._'
+   wait: Func.texted('bold', 'Processed . . .'),
+   invalid: Func.texted('bold', 'URL is Invalid!'),
+   wrong: Func.texted('bold', 'Wrong format!'),
+   getdata: Func.texted('bold', 'Scraping metadata . . .'),
+   fail: Func.texted('bold', 'Can\'t get metadata!'),
+   error: Func.texted('bold', 'Error occurred!'),
+   errorF: Func.texted('bold', 'Sorry this feature is in error.'),
+   auth: Func.texted('bold', 'You do not have permission to use this feature, ask the owner first.'),
+   premium: Func.texted('bold', 'This feature only for premium user.'),
+   owner: Func.texted('bold', 'This command only for owner.'),
+   god: Func.texted('bold', 'This command only for Master'),
+   group: Func.texted('bold', 'This command will only work in groups.'),
+   botAdmin: Func.texted('bold', 'This command will work when I become an admin.'),
+   admin: Func.texted('bold', 'This command only for group admin.'),
+   private: Func.texted('bold', 'Use this command in private chat.'),
+   gameSystem: Func.texted('bold', 'Game features have been disabled.'),
+   nsfwInGroup: Func.texted('bold', 'The nsfw feature has not been activated.'),
+   gameInGroup: Func.texted('bold', 'Game features have not been activated for this group.'),
+   gameLevel: Func.texted('bold', 'You cannot play the game because your level has reached the maximum limit.')
+})
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+fs.unwatchFile(file)
+console.log(chalk.redBright(`Update ${__filename}`))
+delete require.cache[file]
+require(file)
 })

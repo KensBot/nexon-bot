@@ -1,24 +1,23 @@
 exports.run = {
-   usage: ['setwm'],
+   noxious: ['setwm'],
    use: 'packname | author',
    category: 'owner',
    async: async (m, {
-      client,
+      clips,
       text,
       isPrefix,
-      command,
-      Func
+      command
    }) => {
       try {
          let setting = global.db.setting
-         if (!text) return client.reply(m.chat, Func.example(isPrefix, command, 'Sticker by | @neoxrs'), m)
+         if (!text) return clips.reply(m.chat, Func.example(isPrefix, command, 'Sticker by | @kens'), m)
          let [packname, ...author] = text.split`|`
          author = (author || []).join`|`
          setting.sk_pack = packname || ''
          setting.sk_author = author || ''
-         client.reply(m.chat, Func.texted('bold', `🚩 Sticker Watermark successfully set.`), m)
+         clips.reply(m.chat, Func.texted('bold', `Watermark Stiker berhasil disetel.`), m)
       } catch (e) {
-         client.reply(m.chat, Func.jsonFormat(e), m)
+         clips.reply(m.chat, Func.jsonFormat(e), m)
       }
    },
    owner: true,

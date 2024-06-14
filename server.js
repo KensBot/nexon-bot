@@ -3,7 +3,7 @@ const chalk = require('chalk')
 const express = require('express')
 const app = express()
 const http = require('http')
-const env = require('./system/settings.json')
+const env = require('./system/env.json')
 const PORT = process.env.PORT || 8080
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 let i = 0
@@ -16,8 +16,8 @@ const runServer = async () => {
       i++
       try {
          // add your server link on config,json for run 24×7hours. If you are deploying on replit
-         let response = await axios(env.replit_url || 'https://google.com')
-         if (env.replit_url) console.log(chalk.yellowBright.bold('Server wake-up! --', response.status))
+         let response = await axios(env.replit._url || 'https://google.com')
+         if (env.replit._url) console.log(chalk.yellowBright.bold('Server wake-up! --', response.status))
          await sleep(30_000)
       } catch {}
    }

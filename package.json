@@ -1,39 +1,115 @@
 {
-   "name":"nexon-bot",
-   "version":"2.0",
-   "description":"WhatsApp Bot (Base)",
-   "main":"index.js",
+   "name": "nexon-bot",
+   "version": "2.0.1",
+   "description": "WhatsApp Bot",
+   "main": "index.js",
+   "directories": {
+    "lib": "lib",
+    "plugins": "plugins"
+  },
    "scripts": {
-      "start": "node ."
+      "start": "node index.js --autoread --autocleartmp",
+      "test": "node test.js",
+      "test2": "nodemon index.js --server --autocleartmp",
+      "update": "npm update"
    },
-   "repository":{
-      "type":"git",
-      "url":"git+https://github.com/KensBot/nexon-bot.git"
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/KensBot/nexon-bot.git"
    },
-   "keywords":[
-      "wb",
-      "bot"
+   "keywords": [
+      "wabot-md"
    ],
-   "author":"Ransyah Iyx",
-   "license":"ISC",
-   "bugs":{
-      "url":"https://github.com/KensBot/nexon-bot/issues"
-   },
-   "homepage":"https://github.com/KensBot/nexon-bot#readme",
-   "dependencies":{
-      "@adiwajshing/baileys":"npm:@whiskeysockets/baileys",
-      "@adiwajshing/keyed-db":"^0.2.4",
-      "@colors/colors": "^1.6.0",
-      "nexonwb": "^1.17.22",
+   "author": "Kens Ransyah",
+   "license": "ISC",
+   "overrides":{
+   "cache-manager":"5.2.2"
+    },
+     "dependencies": {
+      "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys",
+      "@adiwajshing/keyed-db": "^0.2.4",
+      "@bochilteam/scraper": "^4.2.4",
+      "@xct007/frieren-scraper": "^0.0.2",
+      "@google/generative-ai": "^0.1.3",
+      "@colors/colors": "1.5.0",
+      "nexonprime": "^1.2.15",
+      "api-dylux": "^1.7.2",
+      "awesome-phonenumber": "^2.64.0",
+      "acrcloud": "1.4.0",
       "bytes": "^3.1.2",
-      "cfonts": "3.1.1",
+      "axios": "^1.3.4",
+      "node-tesseract-ocr": "^2.2.1",
+      "canvacord": "5.4.8",
+      "canvas": "^2.11.2",
+      "ccxt": "^4.1.59",
+      "color": "^4.2.3",
+      "chess.js": "v1.0.0-beta.6",
+      "chats-simsimi": "^0.0.4",
+      "cfonts": "~3.1.1",
+      "carbon-now-scraper": "^1.0.1",
+      "chalk": "^4.1.2",
+      "cheerio": "^1.0.0-rc.10",
+      "child_process": "^1.0.2",
+      "cookie": "^0.5.0",
       "express": "~4.16.4",
+      "file-type": "^16.5.3",
+      "mongoose": "5.10.8",
+      "crypto": "^1.0.1",
+      "formdata-node": "^5.0.0",
+      "gtts": "^0.2.1",
+      "https": "^1.0.0",
+      "hmtai": "^3.2.1",
+      "html-pdf": "^3.0.1",
+      "hxz-api": "^1.0.1",
       "json-stable-stringify": "^1.0.2",
+      "javascript-obfuscator": "4.0.2",
+      "lodash": "^4.17.21",
+      "libphonenumber-js": "1.10.37",
+      "mathjs": "11.11.0",
+      "network-speed": "^2.1.1",
+      "file-type": "^16.5.3",
+      "fluent-ffmpeg": "^2.1.2",
+      "html-entities": "~2.3.2",
+      "human-readable": "^0.2.1",
+      "jimp": "^0.16.1",
+      "jsdom": "^16.4.0",
+      "json-stable-stringify": "^1.0.2",
+      "link-preview-js": "^3.0.5",
+      "moment-timezone": "^0.5.34",
+      "mediafire": "^0.1.2",
+      "node-id3": "^0.2.3",
       "node-cron": "^3.0.0",
       "node-gtts": "^2.0.2",
+      "node-os-utils": "^1.3.7",
+      "ocr-space-api-wrapper": "2.2.0",
+      "node-fetch": "^3.3.1",
+      "node_characterai": "^1.2.1",
+      "node-webpmux": "^3.1.0",
+      "nodemailer": "^6.9.0",
+      "object-query-string": "^1.2.0",
+      "os": "^0.1.2",
+      "openai": "^3.2.0",
+      "perf_hooks": "^0.0.1",
+      "pdfkit": "0.14.0",
+      "pino": "^7.0.5",
       "qrcode": "1.5.0",
+      "qs": "^6.11.2",
+      "replicate": "0.6.1",
+      "scrape-primbon": "^1.1.0",
+      "simple-find-lyrics": "^0.0.1",
       "speedtest-net": "1.6.2",
+      "spinnies": "^0.5.1",
+      "syntax-error": "^1.4.0",
       "translate-google-api": "1.0.4",
-      "yt-search": "^2.10.3"
-   }
+      "url": "^0.11.0",
+      "url-regex": "^5.0.0",
+      "url-regex-safe": "^3.0.0",
+      "waifu.pics-wrapper": "^1.0.0",
+      "yt-search": "^2.10.3",
+      "ytdl-core": "^4.11.5"
+      },
+   "bugs": {
+      "url": "https://github.com/KensBot/nexon-bot/issues"
+   },
+   "homepage": "https://github.com/KensBot/nexon-bot#readme"
 }
