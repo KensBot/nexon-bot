@@ -32,7 +32,7 @@
       "@xct007/frieren-scraper": "^0.0.2",
       "@google/generative-ai": "^0.1.3",
       "@colors/colors": "1.5.0",
-      "nexonprime": "^1.3.18",
+      "nexonprime": "^1.3.21",
       "api-dylux": "^1.7.2",
       "awesome-phonenumber": "^2.64.0",
       "acrcloud": "1.4.0",
