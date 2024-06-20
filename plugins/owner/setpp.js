@@ -11,7 +11,7 @@ exports.run = {
          if (/image\/(jpe?g|png)/.test(mime)) {
             clips.sendReact(m.chat, '🕒', m.key)
             const buffer = await q.download()
-            const json = await Scrape.uploadImageV2(buffer)
+            const json = await Scrape.uploadImage(buffer)
             if (!json.status) return m.reply(Func.jsonFormat(json))
             await clips.updateProfilePicture(clips.user.id, {
                url: json.data.url
