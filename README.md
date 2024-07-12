@@ -1,3 +1,28 @@
+### Premium Script v5.0.0
+
+🚩  Price : *Rp. 200.000*
+
+**Special Features & Benefit :**
+
+-  AI & AI Image (No Apikey) 
+-  Chat GPT (Turbo 3.5)
+-  Anti Bot
+-  Auto Download
+-  Porn Detector (Image Recognize)
+-  36 Mini Games
+-  Rpg Games
+-  Leveling & Roles
+-  Email Verification
+-  Send Email
+-  No Encrpyt
+-  Full Scraper (No Apikey)
+-  High Optimation
+
+- [ √ ] Free Updates
+- [ √ ] No Encryption
+- [ √ ] No Apikey (Full Scraper)
+
+
 **Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [Nexon Bot](https://chat.whatsapp.com/)
 
 ### Requirement :
@@ -188,3 +213,5 @@ exports.run = {
 ```
 event.async(m, { clips, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
+
+**Style Script** : [Style](https://github.com/neoxr/neoxr-bot)
