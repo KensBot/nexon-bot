@@ -1,4 +1,4 @@
-**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [NEXON BOT](https://chat.whatsapp.com/)
+**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [Nexon Bot](https://chat.whatsapp.com/)
 
 ### Requirement :
 
