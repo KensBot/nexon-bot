@@ -1,34 +1,9 @@
-### Premium Script v5.0.0
-
-🚩  Price : *Rp. 200.000*
-
-**Special Features & Benefit :**
-
--  AI & AI Image (No Apikey) 
--  Chat GPT (Turbo 3.5)
--  Anti Bot
--  Auto Download
--  Porn Detector (Image Recognize)
--  36 Mini Games
--  Rpg Games
--  Leveling & Roles
--  Email Verification
--  Send Email
--  No Encrpyt
--  Full Scraper (No Apikey)
--  High Optimation
-
-- [ √ ] Free Updates
-- [ √ ] No Encryption
-- [ √ ] No Apikey (Full Scraper)
-
-**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [NEXON BOT](https://chat.whatsapp.com/I3PoXJ878NMKYcPOejAUAV)
+**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [NEXON BOT](https://chat.whatsapp.com/)
 
 ### Requirement :
 
-- [x] NodeJS >= All NodeJs
+- [x] NodeJS >= v14 - v20
 - [x] FFMPEG
-- [x] Canvas (*Welcome/Leave, Profile, Dll*)
 - [x] Server vCPU/RAM 1/2GB (Min)
 
 ### Configuration
