@@ -39,7 +39,6 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 
 
 
-
 **Notes** :
 + ```ram_usage``` : ram usage limit, for example you have a server with 1gb of ram set before the maximum capacity is 900mb.
 
@@ -47,11 +46,6 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 
 > Localdb is only for development state, for production state you must use a cloud database (mongo / postgres)
 
-### High Level Spam Detection
-
-This program is equipped with a spam detector (anti-spam) which is very sensitive.
-
-Look, i tries to spam commands against the bot, and will only respond to 1 command.
 
 
 ### Pairing Code
