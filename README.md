@@ -8,7 +8,7 @@
 
 ### Configuration
 
-There are 1 configuration files namely ```env.json```, adjust them before installing.
+There are 2 configuration files namely ```env.json``` && ```config.js```, adjust them before installing.
 
 ```Javascript
 {
@@ -36,6 +36,8 @@ There are 1 configuration files namely ```env.json```, adjust them before instal
    }
 }
 ```
+
+
 
 
 **Notes** :
@@ -140,7 +142,7 @@ exports.run = {
 
 + ```env``` : parameters that contain the configuration from the env.json file.
 
-+ ```Scraper``` : parameter containing some of the scraper functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
++ ```Scrape``` : parameter containing some of the scraper functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
 
 + ```Func``` : parameter containing some of the utilites functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
 
@@ -165,7 +167,7 @@ cmd.async(m, { clips, args, text, isPrefix: prefix, prefixes, command, groupMeta
 
 ### Event Plugin
 
-```
+```Javascript
 exports.run = {
    async: async (m, {
       clips,
@@ -175,7 +177,7 @@ exports.run = {
       try {
          // do something
       } catch (e) {
-         return client.reply(m.chat, Func.jsonFormat(e), m)
+         return clips.reply(m.chat, Func.jsonFormat(e), m)
       }
    },
    error: false,
