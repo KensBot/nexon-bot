@@ -2,7 +2,7 @@
 
 🚩  Price : *Rp. 200.000*
 
-**Special Features & Benefit :**
+**Special Featuresb:**
 
 -  AI & AI Image (No Apikey) 
 -  Chat GPT (Turbo 3.5)
