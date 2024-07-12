@@ -247,5 +247,3 @@ exports.run = {
 ```
 event.async(m, { clips, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
-
-**Style Script** : [Style](https://github.com/neoxr/neoxr-bot)
