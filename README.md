@@ -61,8 +61,6 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 }
 ```
 
-```config.js```
-
 
 ```Javascript
 // Timezone (Default : Asia/Jakarta)
