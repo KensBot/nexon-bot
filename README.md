@@ -18,9 +18,9 @@
 -  Full Scraper (No Apikey)
 -  High Optimation
 
-- [ √ ] Free Updates
-- [ √ ] No Encryption
-- [ √ ] No Apikey (Full Scraper)
+[ √ ] Free Updates
+[ √ ] No Encryption
+[ √ ] No Apikey (Full Scraper)
 
 
 **Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [Nexon Bot](https://chat.whatsapp.com/)
