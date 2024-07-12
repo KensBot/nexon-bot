@@ -18,25 +18,9 @@
 -  Full Scraper (No Apikey)
 -  High Optimation
 
-**Benefits :**
-
 - [ √ ] Free Updates
 - [ √ ] No Encryption
 - [ √ ] No Apikey (Full Scraper)
-
-**Additional Features :**
-
-- Game Plugins 
-🚩 Price : **+Rp. 70.000**
-
-- Payment Gateway (**Saweria**)
-🚩 Price : **+Rp. 100.000**
-
-- Top Up (**Dana/Ovo/Gopay**)
-🚩 Price : **+Rp. 70.000**
-
-> Additional Features are additional features that are sold separately.
-> Can/have ever run WhatsApp Bot
 
 **Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [NEXON BOT](https://chat.whatsapp.com/I3PoXJ878NMKYcPOejAUAV)
 
@@ -131,9 +115,9 @@ $ pm2 start index.js && pm2 save && pm2 logs
 
 ```Javascript
 exports.run = {
-   noxious: ['mediafire'],
-   hidden: ['mf'],
-   use: 'link',
+   noxious: ['play'],
+   hidden: ['music'],
+   use: 'query',
    category: 'downloader',
    async: async (m, {
       clips,
@@ -200,15 +184,13 @@ exports.run = {
 + ```__filename``` : file path for auto update
 
 **Other** :
-```Javascript
+```
 cmd.async(m, { clips, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
 
 ### Event Plugin
 
-**Event Plugin** is a plugin that runs automatically without using the command.
-
-```Javascript
+```
 exports.run = {
    async: async (m, {
       clips,
@@ -232,10 +214,6 @@ exports.run = {
 + ```prefixes``` : parameter which contains all prefixes in the form of an array, to use them parse based on index. (Example: prefixes[0]).
 
 **Other** :
-```Javascript
+```
 event.async(m, { clips, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
-
-Others please learn by yourself from other plugins.
-
-Check this repository regularly to get updates because the progress base is not 100% yet (this is just a base or beta test), if you find an error please make an issue. Thanks.
