@@ -19,7 +19,9 @@
 -  High Optimation
 
 [ √ ] Free Updates
+
 [ √ ] No Encryption
+
 [ √ ] No Apikey (Full Scraper)
 
 
