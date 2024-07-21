@@ -2,22 +2,19 @@
 
 **Special Features:**
 
--  AI & AI Image (No Apikey) 
--  Chat GPT (Turbo 3.5)
+-  AI & AI Image
+-  Chat GPT
 -  Anti Bot
 -  Auto Download
--  Porn Detector (Image Recognize)
+-  Porn Detector
 -  36 Mini Games
 -  Rpg Games
 -  Leveling & Roles
 -  Email Verification
 -  Send Email
--  No Encrpyt
--  Full Scraper (No Apikey)
 -  High Optimation
 -  Free Updates
 -  No Encryption
--  No Apikey (Full Scraper)
 
 
 **Creator** : [Kens Ransyah](https://wa.me/628888375863)
