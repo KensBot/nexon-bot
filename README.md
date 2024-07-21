@@ -1,6 +1,4 @@
-### Premium Script v5.0.0
-
-🚩  Price : *Rp. 200.000*
+### Script v5.0.0
 
 **Special Featuresb:**
 
@@ -98,15 +96,6 @@ global.status = Object.freeze({
 ```
 
 
-**Notes** :
-+ ```ram_usage``` : ram usage limit, for example you have a server with 1gb of ram set before the maximum capacity is 900mb.
-
-+ ```mongoDB``` : can be filled with mongo and postgresql URLs to use localdb just leave it blank and the data will be saved to the .json file.
-
-> Localdb is only for development state, for production state you must use a cloud database (mongo / postgres)
-
-
-
 ### Pairing Code
 
 Connecting account without qr scan but using pairing code.
@@ -171,53 +160,6 @@ exports.run = {
 }
 ```
 
-#### Up Side Options :
-
-+ ```noxious``` : main command that will automatically appear in the menu list, use of usage can be in the form of arrays and strings.
-
-+ ```hidden``` : commands that are hidden from the menu list, suitable for command aliases or hidden features.
-
-+ ```use``` : this parameter is optionally used when the plugin / feature requires input such as link, query, amount, etc.
-
-+ ```category``` : categories for each plugin that the command will be arranged by category when the menu is displayed.
-
-+ ```m``` : parameters that contain chat object.
-
-+ ```clips``` : parameter which contains several messaging functions from [nexonprime](https://www.npmjs.com/package/nexonprime) and default functions from [Baileys](https://github.com/WhiskeySockets/Baileys).
-
-+ ```args``` : nput given after command in the form of an array is usually found in downloader feature which uses links such as ig, youtube, fb, etc. Parsing based on index. (Example: args[1], args[2], args[3], ....)
-
-+ ```text``` : input that is given after command in the form of a string is usually found in search features that use queries/keywords such as lyrics, chords, yts, etc.
-
-+ ```isPrefix``` : prefix used, if noprefix mode is active this parameter will be blank (it's no problem).
-
-+ ```command``` : commands used can be used in an if else or switch case conditional when creating 1 plugin with several commands in it.
-
-+ ```env``` : parameters that contain the configuration from the env.json file.
-
-+ ```Scrape``` : parameter containing some of the scraper functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
-
-+ ```Func``` : parameter containing some of the utilites functions of [nexonprime](https://www.npmjs.com/package/nexonprime) module.
-
-#### Down Side Options
-
-+ ```error``` : not very useful :v
-
-+ ```limit``` : limit the use of features with limits, to set the number of limits give integer data and for default is boolean true for 1.
-
-+ ```premium``` : to create special features for premium users.
-
-+ ```restrict``` : limit input, restricted input is in the form of badwords in db.setting.toxic.
-
-+ ```cache``` : option to auto update when done recode.
-
-+ ```__filename``` : file path for auto update
-
-**Other** :
-```
-cmd.async(m, { clips, args, text, isPrefix: prefix, prefixes, command, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
-```
-
 ### Event Plugin
 
 ```Javascript
@@ -237,13 +179,4 @@ exports.run = {
    cache: true,
    location: __filename
 }
-```
-
-+ ```body``` : chat in the form of text or emoticons, this plugin is usually used for auto response or group protectors such as anti-links, anti-toxic etc.
-
-+ ```prefixes``` : parameter which contains all prefixes in the form of an array, to use them parse based on index. (Example: prefixes[0]).
-
-**Other** :
-```
-event.async(m, { clips, body, prefixes, groupMetadata, participants, users, chats, groupSet, setting, isOwner, isAdmin, isBotAdmin, plugins, blockList })
 ```
