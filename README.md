@@ -32,7 +32,7 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 ```Javascript
 {
    "owner": "628888375863",
-   "name_owner": "Kens Ransyah",
+   "name_owner": "Owner",
    "database": "database",
    "ram_usage": "900mb",
    "max_upload_free": "100",
