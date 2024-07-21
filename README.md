@@ -100,12 +100,10 @@ global.status = Object.freeze({
 
 Connecting account without qr scan but using pairing code.
 
-<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/ae37cb69b0cc770f66d4b.jpg" /></p>
-
 ```Javascript
 {
    "pairing": {
-      "state": true, // "true" if you want to use the pairing code
+      "state": false, // "true" if you want to use the pairing code
       "number": 62xxxx // start number with country code
    }
 }
