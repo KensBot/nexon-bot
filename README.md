@@ -1,6 +1,6 @@
 ### Script v5.0.0
 
-**Special Featuresb:**
+**Special Features:**
 
 -  AI & AI Image (No Apikey) 
 -  Chat GPT (Turbo 3.5)
@@ -20,7 +20,7 @@
 -  No Apikey (Full Scraper)
 
 
-**Creator / Group** : [Kens Ransyah](https://wa.me/628888375863) / [Nexon Bot](https://chat.whatsapp.com/)
+**Creator** : [Kens Ransyah](https://wa.me/628888375863)
 
 ### Requirement :
 
