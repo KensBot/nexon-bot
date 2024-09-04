@@ -1,8 +1,11 @@
-const { Function, Scraper } = new (require('nexonprime'))
-const fs = require('fs')
-const chalk = require('chalk')
+const { Function, Scraper, NexonScraper, NexonApi } = new (require('@nexon.js/prime'));
+const fs = require('fs');
+const env = require('./env.json');
+const chalk = require('chalk');
 global.fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
+// Apikey https://api.nexon.my.id
+global.Api = new NexonApi(env.nexon.endpoint, env.nexon.keys)
 // Timezone (Default : Asia/Jakarta)
 global.timezone = 'Asia/Jakarta'
 // Bot name

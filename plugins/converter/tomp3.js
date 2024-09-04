@@ -1,4 +1,4 @@
-const { Converter } = new(require('nexonprime'))
+const { Converter } = new(require('@nexon.js/prime'))
 const { readFileSync: read, unlinkSync: remove, writeFileSync: create } = require('fs')
 const path = require('path')
 const { exec } = require('child_process')

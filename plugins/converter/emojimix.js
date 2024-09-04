@@ -14,7 +14,10 @@ exports.run = {
          let [emo1, emo2] = text.split`+`
          clips.sendReact(m.chat, '🕒', m.key)
          if (!emo1 || !emo2) return clips.reply(m.chat, Func.texted('bold', `Berikan 2 emoticon untuk di mix`), m)
-         let json = await Api.emojimix(emo1 + '_' + emo2)
+         let json = await Api.nexon('/emojimix', {
+                      emoji_1: emo1,
+                      emoji_2: emo2
+                    })
          if (!json.status) return clips.reply(m.chat, Func.texted('bold', `Emoticon tidak bisa di mix.`), m)
          await clips.sendSticker(m.chat, await Func.fetchBuffer(json.data.url), m, {
             pack: exif.sk_pack,

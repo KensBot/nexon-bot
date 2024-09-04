@@ -1,6 +1,6 @@
 if (process.argv.includes('--server')) require('./server')
 require('dotenv').config(), require('rootpath')()
-const { spawn: spawn } = require('child_process'), path = require('path'), colors = require('@colors/colors/safe'), CFonts = require('cfonts'), { Function: Func, NexonScraper: Opi } = new(require('nexonprime')), chalk = require('chalk')
+const { spawn: spawn } = require('child_process'), path = require('path'), colors = require('@colors/colors/safe'), CFonts = require('cfonts'), { Function: Func } = new(require('@nexon.js/prime')), chalk = require('chalk'), fs = require('fs'), axios = require('axios')
 
 const unhandledRejections = new Map()
 process.on('unhandledRejection', (reason, promise) => {
@@ -44,7 +44,7 @@ CFonts.say('NEXON BOT', {
 async function checkUpdate() {
 	try {
 		const vcode = require('./version.json').semantic.version
-		const json = await Opi.version()
+		const json = await axios.get('https://api.nexon.my.id/version').then(async (v) => v.data)
 		if (json.status && json.data.version != vcode) return ({
 			update: true,
 			...json.data

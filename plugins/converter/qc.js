@@ -40,7 +40,7 @@ exports.run = {
                "replyMessage": {}
             }]
          }
-         const json = await axios.post('https://bot.lyo.su/quote/generate', obj, {
+         const json = await axios.post('https://quotly.netorare.codes/generate', obj, {
             headers: {
                'Content-Type': 'application/json'
             }

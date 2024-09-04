@@ -9,7 +9,6 @@ module.exports = async (clips, m, chatUpdate, plugins, store) => {
    try {
       require('./system/svcop')(m)
       const isOwner = [clips.decodeJid(clips.user.id).split`@` [0], env.owner, ...global.db.setting.owners].map(v => v + '@s.whatsapp.net').includes(m.sender)
-      const isMods = [clips.decodeJid(clips.user.id).split`@` [0], env.owner, ...global.db.setting.mods].map(v => v + '@s.whatsapp.net').includes(m.sender)
       const isPrem = (global.db.users.some(v => v.jid == m.sender) && global.db.users.find(v => v.jid == m.sender).premium) || isOwner
       const groupMetadata = m.isGroup ? await clips.groupMetadata(m.chat) : {}
       const participants = m.isGroup ? groupMetadata.participants : [] || []
@@ -145,10 +144,6 @@ module.exports = async (clips, m, chatUpdate, plugins, store) => {
             }
             if (cmd.owner && !isOwner) {
                clips.reply(m.chat, global.status.owner, m)
-               continue
-            }
-            if (cmd.mods && !isMods) {
-               clips.reply(m.chat, global.status.mods, m)
                continue
             }
             if (cmd.premium && !isPrem) {

@@ -128,7 +128,7 @@ module.exports = (m) => {
       if (!('owners' in setting)) setting.owners = ['628888375863']
       if (!('mods' in setting)) setting.mods = ['628888375863']
       if (!isNumber(setting.lastReset)) setting.lastReset = new Date * 1
-      if (!('msg' in setting)) setting.msg = 'Hi +tag 🪸\n*+greetingV2*\n\n  ⁃ *Database* : +db\n  ⁃ *Library* : Baileys v+versi\n  ⁃ *Website* : https://info.nexon.my.id\n\nIf you find an error or want to upgrade premium plan or want rent bot contact the owner.'
+      if (!('msg' in setting)) setting.msg = 'Hi +tag 🪸\n*+greetingV2*\n\n  ⁃ *Database* : +db\n  ⁃ *Library* : Baileys v+versi\n  ⁃ *Rest Api* : https://api.nexon.my.id\n\nIf you find an error or want to upgrade premium plan or want rent bot contact the owner.'
       if (!isNumber(setting.menuStyle)) setting.menuStyle = 5
       if (!('cover' in setting)) setting.cover = 'https://iili.io/JTR9IOg.jpg'
       if (!('link' in setting)) setting.link = 'https://chat.whatsapp.com/I3PoXJ878NMKYcPOejAUAV'
@@ -157,7 +157,7 @@ module.exports = (m) => {
          owners: ['628888375863'],
          mods: ['628888375863'],
          lastReset: new Date * 1,
-         msg: 'Hi +tag 🪸\n*+greetingV2*\n\n  ⁃ *Database* : +db\n  ⁃ *Library* : Baileys v+versi\n  ⁃ *Website* : https://info.nexon.my.id\n\nIf you find an error or want to upgrade premium plan or want rent bot contact the owner.',
+         msg: 'Hi +tag 🪸\n*+greetingV2*\n\n  ⁃ *Database* : +db\n  ⁃ *Library* : Baileys v+versi\n  ⁃ *Rest Api* : https://api.nexon.my.id\n\nIf you find an error or want to upgrade premium plan or want rent bot contact the owner.',
          menuStyle: 5,
          cover: 'https://iili.io/J7Oajus.jpg',
          link: 'https://chat.whatsapp.com/I3PoXJ878NMKYcPOejAUAV'
