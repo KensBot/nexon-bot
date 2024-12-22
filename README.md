@@ -17,7 +17,7 @@
 -  No Encryption
 
 
-**Creator** : [Kens Ransyah](https://wa.me/628888375863)
+**Creator** : [𝐂𝐡𝐢𝐨 𝐇𝐨𝐬𝐭𝐢𝐧𝐠.](https://wa.me/6283111036395)
 
 ### Requirement :
 
@@ -31,8 +31,8 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 
 ```Javascript
 {
-   "owner": "628888375863",
-   "name_owner": "Owner",
+   "owner": "6283111036395",
+   "name_owner": "𝐂𝐡𝐢𝐨",
    "database": "database",
    "ram_usage": "900mb",
    "max_upload_free": "100",
@@ -61,9 +61,9 @@ There are 2 configuration files namely ```env.json``` && ```config.js```, adjust
 // Timezone (Default : Asia/Jakarta)
 global.timezone = 'Asia/Jakarta'
 // Bot name
-global.botname = `© nexon-bot`
+global.botname = `© 𝐂𝐡𝐢𝐨-bot`
 // Footer text
-global.footer = 'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ɴᴇxᴏɴ ッ'
+global.footer = 'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ 𝐂𝐡𝐢𝐨 ッ'
 // Function Scraper
 global.Scrape = Scraper
 // Function
